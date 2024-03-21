@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM forth lacture</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>java script </li>
+    </ul>
+</body>
+<script>
+    function addlanguage(languagename) {
+
+        let li = document.createElement("li")
+        li.innerHTML = `${languagename}`
+        document.querySelector(".language").appendChild(li);
+    } addlanguage("python")
+
+    const secchild = document.querySelector("li:nth-child(2)")
+    // secchild.innerHTML = "mojo"
+    const newli = document.createElement("li")
+    newli.innerHTML = "fucking"
+    secchild.replaceWith(newli)
+
+//edit
+
+const firstchild = document.querySelector("li:first-child")
+firstchild.outerHTML = "<li>sexygirl</li>"
+
+//remove
+
+let fuck = document.querySelector("li:last-child");
+fuck.remove()
+
+</script>
+
+</html>

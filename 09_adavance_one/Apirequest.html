@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <title>Document</title>
+    
+    <!-- <meta name="viewport" content="width=\, initial-scale=1.0"> -->
+</head>
+
+<body>
+
+</body>
+<script>
+    const x = 'https://api.github.com/users/c00ldy';
+    const a = new XMLHttpRequest();
+    a.open('get', x)
+a.onreadystatechange = function(){
+    console.log(a.readyState);
+    if(a.readyState === 4){
+        const data = JSON.parse(this.responseText)
+        console.log(data.followers);
+    }
+}
+    a.send()
+</script>
+
+</html>
